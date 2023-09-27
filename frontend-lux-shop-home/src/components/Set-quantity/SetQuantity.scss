@@ -1,0 +1,29 @@
+.set-quantity {
+  font-size: 18px;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e9e9e9;
+  .minus,
+  .plus {
+    font-size: 28px;
+    color: #e9e9e9;
+    transition: all 0.5s;
+    cursor: pointer;
+    &:hover {
+      color: #ff8421;
+    }
+  }
+  .minus {
+    padding-left: 15px;
+  }
+  .plus {
+    padding-right: 15px;
+  }
+  .quantity {
+    color: #000;
+  }
+}

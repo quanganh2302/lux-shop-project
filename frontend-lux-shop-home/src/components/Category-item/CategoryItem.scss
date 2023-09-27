@@ -1,0 +1,19 @@
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  .category-img {
+    width: 100%;
+    height: 300px !important;
+    background-image: url("../../assets//OUTERWEAR.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .category-name{
+    padding-top: 12px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+}

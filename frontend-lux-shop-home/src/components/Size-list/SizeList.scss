@@ -1,0 +1,18 @@
+.size-list {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  .size-item {
+    cursor: pointer;
+    text-align: center;
+    line-height: 35px;
+    font-size: 14px;
+    color: #333333;
+    width: 35px;
+    height: 35px;
+    text-transform: uppercase;
+    border: 1px solid #333333;
+    border-radius: 50%;
+  }
+}

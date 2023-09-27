@@ -1,0 +1,96 @@
+.men-recommend {
+  padding: 0 95px;
+  margin-bottom: 80px;
+  @media screen and (min-width: 360px) {
+    padding: 0 15px;
+    margin-bottom: 50px;
+  }
+  @media screen and (min-width: 1180px) {
+    padding: 0 95px;
+    margin-bottom: 80px;
+  }
+  .recommend-title {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    &::before,
+    &::after {
+      content: "";
+      position: relative;
+      width: 35%;
+      height: 1px;
+      background-color: #e6e6e6;
+      @media screen and (min-width: 360px) {
+        width: 20%;
+        margin-bottom: 30px;
+      }
+      @media screen and (min-width: 760px) {
+        width: 35%;
+        margin-bottom: 50px;
+      }
+    }
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: 0;
+    }
+  }
+  .recommend-swiper {
+    .recommend-swiper-item {
+      .recommend-card-item {
+        .wrap-item {
+          .warp-image {
+            @media screen and (min-width: 760px) {
+              height: 380px !important;
+            }
+          }
+        }
+      }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 40px;
+      height: 40px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      transition: all 0.5s;
+      transform: translateY(-52px);
+      @media screen and (min-width: 360px) {
+        width: 30px;
+        height: 30px;
+      }
+      @media screen and (min-width: 1180px) {
+        width: 40px;
+        height: 40px;
+      }
+      &:hover {
+        border: 2px solid #ff9000;
+        background-color: #ff9000;
+      }
+    }
+    .swiper-button-prev {
+      &::after {
+        font-size: 15px;
+        color: white;
+        &:hover {
+          color: #ff9000;
+        }
+      }
+    }
+    .swiper-button-next {
+      &::after {
+        font-size: 15px;
+        color: white;
+        &:hover {
+          color: #ff9000;
+        }
+      }
+    }
+  }
+}

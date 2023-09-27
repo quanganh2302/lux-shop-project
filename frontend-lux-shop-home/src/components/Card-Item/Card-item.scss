@@ -1,0 +1,319 @@
+.card-item {
+  .wrap-item {
+    width: 100%;
+    .warp-image {
+      overflow: hidden;
+      position: relative;
+      height: 420px;
+      @media screen and (min-width: 360px) {
+        height: 260px;
+        border: 1px solid rgba($color: #868686, $alpha: 0.3);
+      }
+      @media screen and (min-width: 1060px) {
+        height: 420px;
+      }
+      @media screen and (min-width: 1200px) {
+        height: 420px;
+      }
+      .item-image {
+        height: 100%;
+        background-image: url("../../assets/Simona-Ribbed-Cardigan_01.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 130%;
+        transition: all 1s;
+        @media screen and (min-width: 360px) {
+          background-size: 130%;
+        }
+        @media screen and (min-width: 1060px) {
+          background-size: 140%;
+        }
+        @media screen and (min-width: 1200px) {
+          background-size: 130%;
+        }
+        &::after {
+          content: "";
+          transition: all 1s;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: #242424;
+          opacity: 0;
+        }
+      }
+      .wrap-heart-icon {
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 50%;
+        line-height: 30px;
+        .heart-icon {
+          width: 30px;
+          height: 30px;
+          padding: 5px;
+          fill: none;
+          stroke: black;
+          stroke-width: 1px;
+          cursor: pointer;
+        }
+        &:hover {
+          background-color: #000;
+          .heart-icon {
+            stroke: white;
+            // background-color: #000;
+            animation: heart-beat 1s infinite;
+          }
+        }
+      }
+      .item-chose-size {
+        text-align: center;
+        position: absolute;
+        // transform: translateY(-150px);
+        color: white;
+        opacity: 0;
+        bottom: 60px;
+        transform: translateX(50%);
+        right: 50%;
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: uppercase;
+        transition: all 0.5s;
+        @media screen and (min-width: 360px) {
+          opacity: 1;
+          bottom: 40px;
+        }
+        @media screen and (min-width: 1060px) {
+          opacity: 1;
+          bottom: 40px;
+        }
+        @media screen and (min-width: 1200px) {
+          opacity: 0;
+          bottom: 60px;
+        }
+      }
+      .item-quick-shop,
+      .item-quick-view {
+        @media screen and (min-width: 360px) {
+          width: 50%;
+          height: 40px;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 40px;
+          text-align: center;
+          font-size: 14px;
+          line-height: 18px;
+          color: black;
+          padding: 6px 10px;
+          transition: none;
+          border-top: 1px solid rgba($color: #868686, $alpha: 0.3);
+          z-index: 50;
+          p {
+            opacity: 0;
+          }
+          .icon-view {
+            color: black;
+          }
+        }
+        @media screen and (min-width: 1200px) {
+          width: 100px;
+          height: 30px;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 50px;
+          text-align: center;
+          font-size: 14px;
+          line-height: 18px;
+          color: black;
+          padding: 6px 10px;
+          margin: 0 4px;
+          background-color: white;
+          border-radius: 20px;
+          transition: all 0.5s;
+          cursor: pointer;
+          opacity: 0;
+          overflow: hidden;
+          p {
+            opacity: 1;
+          }
+          &:hover {
+            background-color: #000;
+          }
+        }
+      }
+      .item-quick-shop {
+        background-color: #fff;
+        @media screen and (min-width: 360px) {
+          transform: translate(0, -100%);
+          transition: none;
+          border-left: 1px solid rgba($color: #868686, $alpha: 0.3);
+        }
+        @media screen and (min-width: 1200px) {
+          transform: translate(-50%, -100%);
+          transition: all 0.5s;
+        }
+        p {
+          position: absolute;
+          transition: all 0.5s;
+          transform: translateY(0);
+        }
+        .icon-view {
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, 50px);
+          width: 20px;
+          height: 20px;
+          color: #fff;
+          transition: all 0.5s;
+          @media screen and (min-width: 360px) {
+            // position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 20px;
+            height: 20px;
+            color: #000;
+            transition: none;
+          }
+          @media screen and (min-width: 1200px) {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 50px);
+            width: 20px;
+            height: 20px;
+            color: #fff;
+            transition: all 0.5s;
+          }
+        }
+        &:hover {
+          p {
+            transform: translateY(-50px);
+          }
+          .icon-view {
+            transform: translate(-50%, 0);
+          }
+        }
+      }
+      .item-quick-view {
+        background-color: #fff;
+        @media screen and (min-width: 360px) {
+          transform: translateX(-100%);
+          transition: none;
+        }
+        @media screen and (min-width: 1200px) {
+          transform: translateX(-50%);
+          transition: all 0.5s;
+        }
+        p {
+          position: absolute;
+          transition: all 0.5s;
+          transform: translateY(0);
+        }
+        .icon-view {
+          @media screen and (min-width: 360px) {
+            // position: absolute;
+            left: 50%;
+            transform: translate(0);
+            width: 20px;
+            height: 20px;
+            color: #000;
+            transition: none;
+          }
+          @media screen and (min-width: 1200px) {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 50px);
+            width: 20px;
+            height: 20px;
+            color: #fff;
+            transition: all 0.5s;
+          }
+        }
+        &:hover {
+          p {
+            transform: translateY(-50px);
+          }
+          .icon-view {
+            @media screen and (min-width: 360px) {
+              transform: translate(0);
+            }
+            @media screen and (min-width: 1200px) {
+              transform: translate(-50%, 0);
+            }
+          }
+        }
+      }
+      &:hover {
+        // background-size: 150%;
+        .item-image {
+          transform: scale(1.1);
+          background-image: url("../../assets/Simona-Ribbed-Cardigan_02.jpg");
+          &::after {
+            opacity: 0.3;
+          }
+        }
+        .item-chose-size {
+          opacity: 1;
+        }
+        .item-quick-shop {
+          @media screen and (min-width: 360px) {
+            transform: translate(0, -100%);
+          }
+
+          @media screen and (min-width: 1200px) {
+            transform: translate(5%, -100%);
+            opacity: 1;
+          }
+        }
+        .item-quick-view {
+          @media screen and (min-width: 360px) {
+            transform: translateX(-100%);
+          }
+
+          @media screen and (min-width: 1200px) {
+            transform: translateX(-105%);
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .item-details {
+      padding: 18px 0 ;
+      font-size: 14px;
+      font-weight: 300;
+      .item-name {
+        text-transform: capitalize;
+        margin-bottom: 5px;
+        transition: all 0.5s;
+        cursor: pointer;
+        &:hover {
+          color: #ff8421;
+        }
+      }
+      .item-price {
+        color: #868686;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+
+
+@keyframes heart-beat {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

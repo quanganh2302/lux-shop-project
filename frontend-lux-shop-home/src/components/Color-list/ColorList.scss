@@ -1,0 +1,14 @@
+.borderColor {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #868686;
+  .bgColor {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: red;
+  }
+}

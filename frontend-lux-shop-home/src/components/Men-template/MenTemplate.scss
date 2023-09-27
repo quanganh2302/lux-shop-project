@@ -1,0 +1,90 @@
+.men-template {
+  width: 120%;
+  height: 50px;
+  display: flex;
+  gap: 0;
+  background-color: #f2ece2;
+  margin-bottom: 80px;
+  @media screen and (min-width: 360px) {
+    width: calc(180%);
+    margin-bottom: 50px;
+  }
+  @media screen and (min-width: 760px) {
+    width: calc(100% * 4 / 3);
+    margin-bottom: 80px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 120%;
+  }
+  @for $i from 0 through 5 {
+    .template-item#{$i} {
+      text-align: center;
+      margin: 0;
+      height: 50px;
+      padding: 15px 30px;
+      font-size: 10px;
+      font-weight: 500;
+      animation-name: rightToLeft#{$i};
+      animation-duration: 12s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      @media screen and (min-width: 360px) {
+        padding: 15px 10px;
+        width: 60%;
+      }
+      @media screen and (min-width: 760px) {
+        width: calc(100% / 3);
+        padding: 15px 20px;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 20%;
+        padding: 15px 30px;
+      }
+    }
+  }
+
+  @for $i from 3 through 5 {
+    .template-item#{$i} {
+      @media screen and (min-width: 360px) {
+        display: none;
+      }
+      @media screen and (min-width: 760px) {
+        display: none;
+      }
+      @media screen and (min-width: 1200px) {
+        display: block;
+      }
+    }
+  }
+  .template-item3 {
+    @media screen and (min-width: 360px) {
+      display: none;
+    }
+    @media screen and (min-width: 760px) {
+      display: block;
+    }
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
+  }
+}
+
+@for $i from 0 through 5 {
+  @keyframes rightToLeft#{$i} {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+// @keyframes rightToLeft {
+//   from {
+//     transform: translateX(-100%);
+//   }
+//   to {
+//     transform: translateX(0);
+//   }
+// }

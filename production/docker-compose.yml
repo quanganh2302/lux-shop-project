@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      - MYSQL_DATABASE=lux_shop
+      - MYSQL_ROOT_PASSWORD=123456
+    ports:
+      - '3307:3306'
+    expose:
+      - 3306
+
+  backend:
+    build:
+      context: ../Backend-fashion-shop
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      - DB_PORT=3306
+      - DB_HOST=db
+      - URL_REACT=http://localhost
+    ports:
+      - 8080:8080
+    expose:
+      - 8080
+
+  nginx:
+    image: nginx:1.25.2
+    ports:
+      - 80:80
+    volumes:
+      - ../frontend-fashion-shop-admin/build:/usr/share/nginx/html
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+
+# docker compose -p lux-shop up -d

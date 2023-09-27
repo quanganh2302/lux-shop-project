@@ -1,0 +1,248 @@
+.men-shop-now {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+  height: 750px;
+  grid-gap: 30px;
+  margin-bottom: 80px;
+  @media screen and (min-width: 360px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 50px;
+  }
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 340px;
+    grid-gap: 0;
+    margin-bottom: 80px;
+  }
+  @media screen and (min-width: 1060px) {
+    height: 580px;
+    grid-gap: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    height: 750px;
+    grid-gap: 30px;
+  }
+  .shop-now-item-1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    transition: all 0.5s;
+    background-size: 140%;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 360px) {
+      background-size: 130%;
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+    }
+    @media screen and (min-width: 768px) {
+      background-size: 100%;
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 2;
+    }
+    @media screen and (min-width: 1060px) {
+      background-size: 140%;
+    }
+    @media screen and (min-width: 1200px) {
+      background-size: 140%;
+    }
+    .item-content {
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      //   border: 1px solid white;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        transition: all 0.5s;
+        border-top: 1px solid #fff;
+        border-left: 1px solid #fff;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        transition: all 0.5s;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+      }
+      .item-title {
+        color: white;
+        font-size: 45px;
+        font-weight: 300;
+        margin-bottom: 10px;
+        line-height: 50px;
+      }
+    }
+    &:hover {
+      background-size: 150%;
+      .item-content {
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .shop-now-item-2 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    @media screen and (min-width: 360px) {
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 1;
+    }
+    @media screen and (min-width: 768px) {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+    }
+    .item-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 30px;
+
+      .item-title {
+        color: white;
+        font-size: 30px;
+        font-weight: 300;
+      }
+    }
+    &:hover {
+      background-position: -30px;
+    }
+  }
+  .shop-now-item-3 {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    @media screen and (min-width: 360px) {
+      grid-column: 1 / span 1;
+      grid-row: 3 / span 1;
+    }
+    @media screen and (min-width: 768px) {
+      grid-column: 2 / span 1;
+      grid-row: 2 / span 1;
+    }
+    .item-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 30px;
+
+      .item-title {
+        color: white;
+        font-size: 30px;
+        font-weight: 300;
+      }
+    }
+    &:hover {
+      background-position: -30px;
+    }
+    .item-title {
+      color: white;
+      font-size: 30px;
+      font-weight: 300;
+    }
+  }
+  .shop-now-item-1,
+  .shop-now-item-2,
+  .shop-now-item-3 {
+    background-repeat: no-repeat;
+    // background-size: cover;
+    cursor: pointer;
+    .item-nav {
+      color: white;
+      font-size: 14px;
+      text-transform: capitalize;
+      font-weight: 300;
+      border-bottom: 1px solid white;
+      padding-bottom: 10px;
+      display: inline-block;
+      transition: all 0.5s;
+      &:hover {
+        color: #ff8421;
+        border-bottom: 1px solid #ff8421;
+      }
+    }
+  }
+  .shop-now-item-2,
+  .shop-now-item-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: -10px;
+    transition: all 0.5s;
+    position: relative;
+    @media screen and (min-width: 360px) {
+      background-size: 200%;
+      background-position: center;
+    }
+    @media screen and (min-width: 760px) {
+      background-size: 120%;
+    }
+    @media screen and (min-width: 1080px) {
+      background-size: cover;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0;
+      background-color: white;
+      opacity: 0.1;
+      transition: all 0.5s;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 100%;
+      background-color: white;
+      opacity: 0.1;
+      transition: all 0.5s;
+    }
+    &:hover {
+      //   background-size: 120%;
+      //   transition: all 0.5s;
+      //   @media screen and (min-width: 360px) {
+      //     background-size: 150%;
+      //   }
+      //   @media screen and (min-width: 768px) {
+      //     background-size: 120%;
+      //   }
+      &::after {
+        height: 100%;
+      }
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+}

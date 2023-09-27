@@ -1,0 +1,109 @@
+.men-category {
+  padding: 0 95px;
+  @media screen and (min-width: 360px) {
+    padding: 0 15px;
+    margin-bottom: 50px;
+  }
+  @media screen and (min-width: 760px) {
+    padding: 0 95px;
+    margin-bottom: 80px;
+  }
+  .category-title {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (min-width: 360px) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: 760px) {
+      margin-bottom: 50px;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: relative;
+      width: 35%;
+      height: 1px;
+      background-color: #e6e6e6;
+      @media screen and (min-width: 360px) {
+        width: 20%;
+      }
+      @media screen and (min-width: 1500px) {
+        width: 35%;
+      }
+    }
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: 0;
+    }
+  }
+  .category-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 10px;
+    column-gap: 20px;
+    @media screen and (min-width: 360px) {
+      display: none;
+    }
+    @media screen and (min-width: 1500px) {
+      display: grid;
+    }
+  }
+  .category-slider {
+    @media screen and (min-width: 360px) {
+      display: black;
+    }
+    @media screen and (min-width: 1500px) {
+      display: none;
+    }
+    .category-swiper {
+      .category-swiper-item {
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        transition: all 0.5s;
+        @media screen and (min-width: 360px) {
+          width: 30px;
+          height: 30px;
+        }
+        @media screen and (min-width: 1500px) {
+          width: 40px;
+          height: 40px;
+        }
+        &:hover {
+          border: 2px solid #ff9000;
+          background-color: #ff9000;
+        }
+      }
+      .swiper-button-prev {
+        &::after {
+          font-size: 15px;
+          color: white;
+          &:hover {
+            color: #ff9000;
+          }
+        }
+      }
+      .swiper-button-next {
+        &::after {
+          font-size: 15px;
+          color: white;
+          &:hover {
+            color: #ff9000;
+          }
+        }
+      }
+    }
+  }
+}

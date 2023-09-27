@@ -1,0 +1,362 @@
+.shop-now {
+  width: 100%;
+  .shop-now-left,
+  .shop-now-center,
+  .shop-now-right {
+    position: relative;
+    cursor: pointer;
+    button {
+      width: 160px;
+      height: 54px;
+      border-radius: 27px;
+      font-size: 16px;
+      font-weight: 400;
+      border: 1px solid #fff;
+      color: #fff;
+      text-transform: capitalize;
+      transition: all 0.5s ease;
+      z-index: 10;
+      position: relative;
+      overflow: hidden;
+      &:hover {
+        border: 1px solid #ff8421;
+      }
+    }
+  }
+  .shop-now-left {
+    width: 100%;
+    background-image: url("../../assets/shoes.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: all 0.5s;
+    @media screen and (min-width: 360px) {
+      min-height: 310px;
+      background-size: 100%;
+    }
+    @media screen and (min-width: 768px) {
+      min-height: 310px;
+      background-size: 100%;
+    }
+    @media screen and (min-width: 1060px) {
+      min-height: 475px;
+      background-size: 100%;
+    }
+    @media screen and (min-width: 1200px) {
+      min-height: 620px;
+      background-size: 100%;
+    }
+    .back-btn-vl-1 {
+      border: 1px solid #fff;
+      width: 160px;
+      height: 54px;
+      border-radius: 27px;
+      position: absolute;
+      background-color: #ff8421;
+      transition: all 0.5s ease;
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    .back-btn-vl-1.active {
+      border: 1px solid #ff8421;
+      background-color: #ff8421;
+      transform: scale(1);
+      opacity: 1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0;
+      background-color: white;
+      opacity: 0.1;
+      transition: all 0.5s;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 100%;
+      background-color: white;
+      opacity: 0.1;
+      transition: all 0.5s;
+    }
+    &:hover {
+      background-size: 120%;
+      transition: all 0.5s;
+      &::after {
+        height: 100%;
+      }
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+  .shop-now-center {
+    width: 100%;
+    background-image: url("../../assets/women2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    // background-size: cover;
+    background-size: 120%;
+    transition: all 0.5s;
+    @media screen and (min-width: 360px) {
+      min-height: 310px;
+      background-position: center -30px;
+    }
+    @media screen and (min-width: 768px) {
+      min-height: 310px;
+      background-position: center;
+    }
+    @media screen and (min-width: 1060px) {
+      min-height: 475px;
+      background-position: center;
+    }
+    @media screen and (min-width: 1200px) {
+      min-height: 620px;
+      background-position: center;
+    }
+    .shop-now-title {
+      transform: translateY(200px);
+      color: #000000;
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 40px;
+      margin-bottom: 15px;
+      text-transform: capitalize;
+      text-align: center;
+      @media screen and (min-width: 360px) {
+        transform: translateY(90px);
+        margin-bottom: 10px;
+        font-weight: 300;
+        font-size: 30px;
+      }
+      @media screen and (min-width: 768px) {
+        transform: translateY(100px);
+        margin-bottom: 10px;
+        font-weight: 300;
+        font-size: 30px;
+      }
+      @media screen and (min-width: 1060px) {
+        transform: translateY(200px);
+        margin-bottom: 15px;
+        font-size: 40px;
+        font-weight: 300;
+      }
+    }
+    .shop-now-nav {
+      transform: translateY(200px);
+      text-transform: capitalize;
+      border-bottom: 2px solid #000000;
+      padding-bottom: 5px;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0px;
+      margin-bottom: 60px;
+      @media screen and (min-width: 360px) {
+        transform: translateY(90px);
+        font-weight: 300;
+      }
+      @media screen and (min-width: 768px) {
+        transform: translateY(100px);
+      }
+      @media screen and (min-width: 1060px) {
+        transform: translateY(200px);
+      }
+      &:hover {
+        color: #ff8421;
+        border-bottom: 2px solid #ff8421;
+        transition: all 0.5s;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0;
+      background-color: white;
+      opacity: 0.1;
+      transition: all 0.5s;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 100%;
+      background-color: white;
+      opacity: 0.1;
+      transition: all 0.5s;
+    }
+    &:hover {
+      background-size: 140%;
+      transition: all 0.5s;
+      &::after {
+        height: 100%;
+      }
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+  .shop-now-right {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .shop-now-right-up {
+      width: 100%;
+      min-height: 50%;
+      background-image: url("../../assets/women_shopnow.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      background-size: 100%;
+      transition: all 0.5s;
+      @media screen and (min-width: 360px) {
+        min-height: 310px;
+        background-size: 130%;
+      }
+      @media screen and (min-width: 768px) {
+        min-height: 155px;
+        background-size: 100%;
+      }
+      @media screen and (min-width: 1060px) {
+        min-height: 237.5px;
+        background-size: 100%;
+      }
+      @media screen and (min-width: 1200px) {
+        min-height: 310px;
+        background-size: 100%;
+      }
+      .back-btn-vl-2 {
+        border: 1px solid #fff;
+        width: 160px;
+        height: 54px;
+        border-radius: 27px;
+        position: absolute;
+        background-color: #ff8421;
+        transition: all 0.5s ease;
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      .back-btn-vl-2.active {
+        border: 1px solid #ff8421;
+        background-color: #ff8421;
+        transform: scale(1);
+        opacity: 1;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0;
+        background-color: white;
+        opacity: 0.1;
+        transition: all 0.5s;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 100%;
+        background-color: white;
+        opacity: 0.1;
+        transition: all 0.5s;
+      }
+      &:hover {
+        background-size: 120%;
+        transition: all 0.5s;
+        @media screen and (min-width: 360px) {
+          background-size: 150%;
+        }
+        @media screen and (min-width: 768px) {
+          background-size: 120%;
+        }
+        &::after {
+          height: 100%;
+        }
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+    .shop-now-right-down {
+      position: relative;
+      width: 100%;
+      min-height: 50%;
+      background-image: url("../../assets/Accessories_2.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-size: 100%;
+      transition: all 0.5s;
+      @media screen and (min-width: 360px) {
+        min-height: 310px;
+        background-size: 130%;
+      }
+      @media screen and (min-width: 768px) {
+        min-height: 155px;
+        background-size: 100%;
+      }
+      @media screen and (min-width: 1060px) {
+        min-height: 237.5px;
+        background-size: 100%;
+      }
+      @media screen and (min-width: 1200px) {
+        min-height: 310px;
+        background-size: 100%;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0;
+        background-color: white;
+        opacity: 0.1;
+        transition: all 0.5s;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 100%;
+        background-color: white;
+        opacity: 0.1;
+        transition: all 0.5s;
+      }
+      .back-btn-vl-3 {
+        border: 1px solid #fff;
+        width: 160px;
+        height: 54px;
+        border-radius: 27px;
+        position: absolute;
+        background-color: #ff8421;
+        transition: all 0.5s ease;
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      .back-btn-vl-3.active {
+        border: 1px solid #ff8421;
+        background-color: #ff8421;
+        transform: scale(1);
+        opacity: 1;
+      }
+      &:hover {
+        background-size: 120%;
+        transition: all 0.5s;
+        @media screen and (min-width: 360px) {
+          background-size: 150%;
+        }
+        @media screen and (min-width: 768px) {
+          background-size: 120%;
+        }
+        &::after {
+          height: 100%;
+        }
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

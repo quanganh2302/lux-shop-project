@@ -1,0 +1,99 @@
+.blog {
+  background-color: #f6f6f6;
+  padding-bottom: 80px;
+  .blog-container {
+    // display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .blog-title {
+      text-transform: capitalize;
+      text-align: center;
+      padding: 60px 0;
+      font-size: 30px;
+    }
+    .blog-slide {
+      .blog-slide-item {
+        .wrap-image {
+          overflow: hidden;
+          cursor: pointer;
+          .image {
+            height: 330px;
+            width: 100%;
+            background: url("../../assets/blog-girl-1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            transition: all 0.5s;
+          }
+          &:hover {
+            .image {
+              background-size: 120%;
+            }
+          }
+        }
+        .wrap-text {
+          margin-top: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .tag-item {
+            color: #868686;
+            letter-spacing: 1px;
+            font-size: 14px;
+            margin-bottom: 5px;
+            a {
+              transition: all 0.5s;
+              text-transform: uppercase;
+              &:hover {
+                color: #ff8421;
+              }
+            }
+          }
+          h3 {
+            font-size: 20px;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+            color: #000;
+            transition: all 0.5s;
+            cursor: pointer;
+            &:hover {
+              color: #ff8421;
+            }
+          }
+          .read-more {
+            font-size: 12px;
+            text-transform: uppercase;
+            transition: all 0.5s;
+            color: #000;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #000;
+            &:hover {
+              color: #ff8421;
+              border-bottom: 1px solid #ff8421;
+            }
+          }
+        }
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        background-color: white;
+        width: 35px;
+        height: 35px;
+        transition: all 0.5s;
+        top: 165px;
+        &::after {
+          font-size: 14px;
+          color: #868686;
+        }
+        &:hover {
+          background-color: #ff8421;
+          &::after {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.add-wishlist {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    color: #ff8421;
+    .wishlist-icon {
+      border: 1px solid #ff8421;
+      .heart-icon {
+        stroke: #ff8421;
+      }
+    }
+    span {
+      color: #ff8421;
+    }
+  }
+  .wishlist-icon {
+    border-radius: 50%;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    transition: all 0.5s;
+    .heart-icon {
+      transition: all 0.5s;
+      width: 15px;
+      height: 15px;
+      fill: white;
+      stroke: #000;
+      stroke-width: 1px;
+    }
+  }
+  span {
+    transition: all 0.5s;
+    color: #000;
+    text-transform: capitalize;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,24 @@
+.breadcrumb {
+  padding-bottom: 35px;
+  text-align: center;
+  color: #868686;
+  font-size: 14px;
+  .breadcrumb-home {
+    color: #cccccc;
+  }
+  .breadcrumb-not-active {
+    color: #cccccc;
+    display: none;
+  }
+
+  .breadcrumb-active {
+    color: #000000;
+  }
+  span {
+    .breadcrumb-arrow {
+      margin-left: 10px;
+      margin-right: 10px;
+      display: inline-block ;
+    }
+  }
+}
