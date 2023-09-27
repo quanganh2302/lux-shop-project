@@ -6,8 +6,6 @@ COPY package*.json ./
 
 RUN npm i 
 
-RUN npx sequelize-cli db:migrate
-
 RUN npm i -g @babel/core @babel/cli
 
 COPY . .
