@@ -13,7 +13,7 @@ services:
 
   backend:
     build:
-      context: ../Backend-fashion-shop
+      context: ../backend-fashion-shop
       dockerfile: Dockerfile
     restart: unless-stopped
     environment:
