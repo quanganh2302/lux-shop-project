@@ -4,9 +4,9 @@ WORKDIR /lux-shop/backend
 
 COPY package*.json ./
 
-RUN npm i 
+RUN npm install 
 
-RUN npm i -g @babel/core @babel/cli
+RUN npm install -g @babel/core @babel/cli
 
 COPY . .
 
