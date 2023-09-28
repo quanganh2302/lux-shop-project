@@ -21,6 +21,10 @@ services:
       - DB_HOST=db
       - URL_REACT=http://localhost
       - DB_DIALECT=mysql
+      - NODE_ENV=development
+      - DB_DATABASE_NAME=lux_shop
+      - DB_USERNAME=root
+      - DB_PASSWORD=123456
     ports:
       - 8080:8080
     expose:
